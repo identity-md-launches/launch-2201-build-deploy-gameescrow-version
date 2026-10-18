@@ -1,0 +1,10 @@
+{
+  "kind": "evm_contracts",
+  "contracts": [
+    {
+      "contract": "GameEscrow",
+      "constructorArgs": ["$owner"]
+    }
+  ],
+  "notes": "Deploy GameEscrow v2 with $owner as the initial result signer. The accepted contract fixes ownership at 0x6c4c78f2c3bdf4c4318fe305fb1c8bc1694d19b5, supports only IMD and SHIFT, and sends the fixed 5% settlement fee to 0x1119d5df2f046bc2d3c0f6279ef2e9ce49422d44, rounding the fee down and paying the remainder to the winner. Constructor limits in whole tokens are IMD 0.5–1000 and SHIFT 10000–50000000. The owner may rotate the result signer, change limits within the fixed hard caps, and pause or unpause new opens and joins. Settlement, refunds and cancellation remain available while paused."
+}
